@@ -3,11 +3,21 @@ let list = document.querySelector(".list")
 let input = document.querySelector(".input")
 let btn = document.querySelector(".btn")
 let yaratildi = document.querySelector(".yaratildi")
+let finished = document.querySelector(".finished")
+let yaratilgan = document.querySelector(".yaratilgan")
 
 btn.setAttribute('disabled', 'true')
 
 function yaratildiFunc() {
+    // let total = list.children.length
+    // let completed = list.querySelectorAll("p.completed").length
+    // yaratildi.textContent = total - completed
     yaratildi.textContent = list.children.length
+}
+
+function finishedFunc() {
+    finished.textContent = list.querySelectorAll("p.completed").length
+    yaratilgan.textContent = list.children.length
 }
 
 input.addEventListener("input", () => {
@@ -39,9 +49,12 @@ form.addEventListener('submit', (e) => {
     icon.addEventListener('click', () => {
         li.remove()
         yaratildiFunc()
+        finishedFunc()
     })
     checkbox.addEventListener("change", () => {
         p.classList.toggle('completed')
+        yaratildiFunc()
+        finishedFunc()
     })
     p.appendChild(text)
     li.appendChild(checkbox)
@@ -50,5 +63,6 @@ form.addEventListener('submit', (e) => {
     list.appendChild(li)
     input.value = ""
     yaratildiFunc()
+    finishedFunc()
     btn.disabled = true
 })
