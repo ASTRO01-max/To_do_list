@@ -6,19 +6,32 @@
     <title>Document</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body> 
     
-    <form action="" class="form">
-        <input type="text" class="input">
-        <button class="btn">Add</button>
-    </form>
-    <div class="counters">
-        <p class="created__text">Yaratildi: <span class="yaratildi">0</span></p>
-        <p class="finished__text">Bajarildi: <span class="finished">0</span>/<span class="yaratilgan">0</span></p>
-    </div>
-    <ul class="list">
-    </ul>
+    <header class="part__top">
+        <div class="container">
+            <h1 class="title">Reja yarating</h1>
+            <form action="" class="form">
+                <input type="text" class="input">
+                <button class="btn">Yaratish<i class="fa-solid fa-circle-plus"></i></button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <section class="main">
+            <div class="container">
+                <div class="counters">
+                    <p class="created__text">Yaratildi: <span class="yaratildi">0</span></p>
+                    <p class="finished__text">Bajarildi: <span class="finished">0</span>/<span class="yaratilgan">0</span></p>
+                </div>
+                <ul class="list">
+                </ul>
+            </div>
+        </section>
+    </main>
     <script src="./app.js"></script>
 </body>
 </html>

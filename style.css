@@ -1,3 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background: #f5f5f5;
+    color: #1f1f1f;
+}
+
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.part__top {
+    background-color: #0D0D0D;
+    padding: 28px 0;
+    color: white;
+}
+
+.title {
+    margin-bottom: 12px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.input {
+    flex: 1 1 220px;
+    padding: 10px 12px;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+    outline: none;
+}
+
+.input:focus {
+    border-color: #3b82f6;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border: 0;
+    border-radius: 6px;
+    background: #1E6F9F;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.main {
+    padding: 20px 0;
+}
+
 .completed {
     text-decoration: line-through;
     opacity: 0.6;   
@@ -6,23 +77,43 @@
 .list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 12px 0 0;
     display: flex;
- 
+    flex-direction: column;
+    gap: 8px;
 }
 
 li {
     display: flex;
     align-items: center;
     gap: 8px;
+    padding: 10px 12px;
+    border: 1px solid #e2e2e2;
+    background: #ffffff;
+    border-radius: 8px;
 }
 
+.text {
+    flex: 1;
+}
 
 .icon {
+    margin-left: auto;
     cursor: pointer;
+    color: #dc2626;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
 }
 
 .counters {
     display: flex;
-    gap: 10px;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.counters p {
+    margin: 0;
 }
